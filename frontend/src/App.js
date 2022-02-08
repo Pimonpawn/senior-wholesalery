@@ -1,8 +1,14 @@
 import './index.css'
 import React from 'react';
+import {BrowserRouter, Route } from 'react-router-dom';
+import HomeScreen from './screens/HomeScreen';
+import ProductScreen from './screens/product/ProductScreen';
 import data from './data';
+import Product from './components/Product';
+
 function App() {
   return (
+    <BrowserRouter>
     <div className="grid-container">
       <header className="row">
         <div>
@@ -14,7 +20,9 @@ function App() {
         </div>
       </header>
       <main>
-        <div id="bgslider">
+        <Route path="/product/:id" component={ProductScreen}></Route>
+        <Route path="/" component={HomeScreen} exact></Route>
+        {/* <div id="bgslider">
           <figure>
             <img src="./images/image1.jpg" alt="Slider" />
             <img src="./images/image2.jpg" alt="Slider" />
@@ -23,37 +31,21 @@ function App() {
             <img src="./images/image5.jpg" alt="Slider" />
           </figure>
         </div>
-        <div>
-          <a className="recommend">Recommend Products</a>
+        <div className="recommend">
+          <a>Recommend Products</a>
         </div>
 
         <div className="row center">
           {
-            data.products.map((products) => (
-              <div key={products._id} className="card">
-                <a href={`/product/${products._id}`}>
-                  <img className="medium" src={products.Image} alt={products.name}/>
-                </a>
-                <div className="card-bady">
-                <a href={`/product/${products._id}`}>
-                    <h2>{products.name}</h2>
-                  </a>
-                  <div className="rating">
-                    <span><i className="fa fa-star"></i></span>
-                    <span><i className="fa fa-star"></i></span>
-                    <span><i className="fa fa-star"></i></span>
-                    <span><i className="fa fa-star"></i></span>
-                    <span><i className="fa fa-star"></i></span>
-                  </div>
-                  <div className="price">{products.price}฿</div>
-                </div>
-              </div>
+            data.product.map((product) => (
+              <Product key={product._id} product={product}></Product>
             ))
           }
 
-        </div>
+        </div> */}
       </main>
     </div>
+    </BrowserRouter>
   );
 }
 

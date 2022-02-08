@@ -1,5 +1,5 @@
 const data = {
-    products:[
+    product:[
         {
             _id: '1',
             name: 'Nike pink1',
@@ -57,6 +57,50 @@ const data = {
         },
         {
             _id: '6',
+            name: 'Nike pink6',
+            category:'Shoes',
+            Image:'/images/product-1.jpg',
+            price:1100,
+            brand:'Nike',
+            rating: 4.5,    
+            numreviews: 10,
+            description: 'High quality'
+        },
+        {
+            _id: '7',
+            name: 'Nike pink6',
+            category:'Shoes',
+            Image:'/images/product-1.jpg',
+            price:1100,
+            brand:'Nike',
+            rating: 4.5,    
+            numreviews: 10,
+            description: 'High quality'
+        },
+        {
+            _id: '8',
+            name: 'Nike pink6',
+            category:'Shoes',
+            Image:'/images/product-1.jpg',
+            price:1100,
+            brand:'Nike',
+            rating: 4.5,    
+            numreviews: 10,
+            description: 'High quality'
+        },
+        {
+            _id: '9',
+            name: 'Nike pink6',
+            category:'Shoes',
+            Image:'/images/product-1.jpg',
+            price:1100,
+            brand:'Nike',
+            rating: 4.5,    
+            numreviews: 10,
+            description: 'High quality'
+        },
+        {
+            _id: '10',
             name: 'Nike pink6',
             category:'Shoes',
             Image:'/images/product-1.jpg',
